@@ -8,6 +8,7 @@
   ],
   "main": "src/blockchain.js",
   "scripts": {
+    "start": "node .\\src\\main.js",
     "test": "nyc mocha tests/*.js",
     "lint": "eslint src/** tests/**",
     "coverage": "nyc --reporter=lcov npm run test"
