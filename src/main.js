@@ -1,4 +1,4 @@
-const {Blockchain, Transaction} = require('./blockchain');
+const { Blockchain, Transaction } = require('./blockchain');
 const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 
@@ -31,10 +31,10 @@ firatCoin.addTransaction(tx2);
 firatCoin.minePendingTransactions(myWalletAddress);
 
 console.log();
-console.log(`Balance of is ${firatCoin.getBalanceOfAddress(myWalletAddress)}`);
+console.log(`Balance of Emre is ${firatCoin.getBalanceOfAddress(myWalletAddress)}`);
 
 // Uncomment this line if you want to test tampering with the chain
-//firatCoin.chain[1].transactions[0].amount = 10;
+// firatCoin.chain[1].transactions[0].amount = 10;
 
 // Check if the chain is valid
 console.log();

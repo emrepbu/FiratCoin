@@ -38,7 +38,7 @@ class Transaction {
     if (signingKey.getPublic('hex') !== this.fromAddress) {
       throw new Error('You cannot sign transactions for other wallets!');
     }
-
+    
 
     // Calculate the hash of this transaction, sign it with the key
     // and store it inside the transaction obect
@@ -186,11 +186,11 @@ class Blockchain {
     if (!transaction.isValid()) {
       throw new Error('Cannot add invalid transaction to chain');
     }
-
+    
     if (transaction.amount <= 0) {
       throw new Error('Transaction amount should be higher than 0');
     }
-
+    
     // Making sure that the amount sent is not greater than existing balance
     const walletBalance = this.getBalanceOfAddress(transaction.fromAddress);
     if (walletBalance < transaction.amount) {
@@ -214,7 +214,7 @@ class Blockchain {
         throw new Error('Pending transactions for this wallet is higher than its balance.');
       }
     }
-
+                                    
 
     this.pendingTransactions.push(transaction);
     debug('transaction added: %s', transaction);

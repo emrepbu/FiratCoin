@@ -1,10 +1,11 @@
 {
   "name": "firatcoin",
   "version": "1.0.1",
-  "description": "",
+  "description": "Simple Blockchain in Javascript.",
   "keywords": [
     "blockchain",
-    "transactions"
+    "transactions",
+    "education"
   ],
   "main": "src/blockchain.js",
   "scripts": {
@@ -13,7 +14,13 @@
     "lint": "eslint src/** tests/**",
     "coverage": "nyc --reporter=lcov npm run test"
   },
+  "author": "Emre ARGANA <185541073@firat.edu.tr>",
   "license": "MIT",
+  "repository": "github:EmrePbu/FiratCoin",
+  "bugs": {
+    "url": "https://github.com/EmrePbu/FiratCoin/issues"
+  },
+  "homepage": "https://github.com/EmrePbu/FiratCoin",
   "dependencies": {
     "debug": "^4.1.1",
     "elliptic": "^6.5.4"
